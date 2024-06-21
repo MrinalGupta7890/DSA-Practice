@@ -1,5 +1,5 @@
 
-
+## First
 import java.util.Scanner;
 
 public class Solution {
@@ -43,3 +43,45 @@ public class Solution {
         System.out.println(result);
     }
 }
+
+
+
+
+
+## Second
+import java.util.Scanner;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+       
+        int n = scanner.nextInt();
+
+		int firstNum = 0, secondNum = 1;
+		int result = 0;
+
+		if (n == 1) {
+			result = secondNum;
+		} else {
+			for(int i = 2; i <= n; i++){
+			result = firstNum + secondNum;
+			firstNum = secondNum;
+			secondNum = result;
+		}
+
+			
+		}
+
+		// Print the result
+        System.out.println(result);
+
+        // Close the scanner
+        scanner.close();
+		
+    }
+		
+}
+
