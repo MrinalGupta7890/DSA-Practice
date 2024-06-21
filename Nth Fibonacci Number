@@ -1,1 +1,45 @@
 
+
+import java.util.Scanner;
+
+public class Solution {
+
+    // Function to find the n-th Fibonacci number
+    public static int findFibonacci(int n) {
+        // Handle edge cases
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        // Initialize the first two Fibonacci numbers
+        int first = 1;
+        int second = 1;
+        int nth = 1;
+
+        // Calculate the n-th Fibonacci number
+        for (int i = 3; i <= n; i++) {
+            nth = first + second;
+            first = second;
+            second = nth;
+        }
+
+        return nth;
+    }
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+       
+        int n = scanner.nextInt();
+
+        // Close the scanner
+        scanner.close();
+
+        // Find the n-th Fibonacci number
+        int result = findFibonacci(n);
+
+        // Print the result
+        System.out.println(result);
+    }
+}
