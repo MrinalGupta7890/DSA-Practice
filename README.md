@@ -1,4 +1,4 @@
-# Daily DSA-Practice Questions
+# Daily DSA-Practice Questions (Leetcode)
 
 Move Zeroes
 Nth Fibonacci Number
